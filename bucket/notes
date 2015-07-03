@@ -1,0 +1,128 @@
+OK, I've got a few minutes. You wouldn't believe the two weeks I've had- car impounded, wife's working a real estate developement contract, both kids sick, and going from not smoking to chain smoking and back again are barely the top of the list.  Anyway, the big idea is a peer-to-peer distribution system that's rigidly authenticated and which any user can publish any content through for sale, and the peers that deliver the content to (authenticated) buyers get paid for doing it.  Since they can only supply to actual customers, the system makes money- and since they don't have to buy content to supply it (with the footnote that the content has to be exactly identical), they can make money via piracy- which, in order to be fair, goes to paying off the pirated content first (second footnote: they pay off all content that they have pirated), and they make the money for themselves after that.  It's not a lot, it's a small percent of the sale price per total upload of a given content (example: a song costs 99 cents, they get X% of that for one complete upload of the total sum of all data for that song, or in other words, if the song is 30 MB, an upload of Y MB is worth Y/30 * X%, no matter what actual data from the song is transmitted).
+
+That's the big idea.  Since you probably don't need examples of the ways people would try to manipulate a system like this, the security thing is intense and taking a lot of time for me, and that's the motivation for the social behavior and AI element of the client programs: to keep the network informed of risky content and troublesome peers, etc.
+
+So... things are crawling along on this end, but progress is being made.  I'm working on getting shit together in a bitbucket repo, still, and would love for you to have a look once it's all up in place and not too embarrassingly messy- it's just that right now it's simply a mess of ground-up implementations of various features and no single version has what it needs to, or even the place holders for what it would need.  For example, I've come up with a nifty distributed DB layer to allow multiple cooperative hosts with independent environments and any stack imaginable, but it's not working yet, and that's another holdup.
+
+
+
+Talked to Asa about this and he had a great idea (note credit heh) of Portfolio.com (which does not seem to be taken)
+
+But when type it in: This comes up
+
+http://upstart.bizjournals.com/
+
+Which could give you some more ideas.
+
+So people could upload their whole portfolios to your domain -
+
+If we are 'getting you' correctly
+Cool! I've got a domain name, and there's a web site (actually several, because of logistics for this) that will be up soonish. I've kept this project more or less secret the last few years, but I've been working on the idea for 15(!) Years now- and I love your enthusiasm!
+Other details: I'm planning on trying a small Kickstarter at the end of march, on the same day I'm releasing an alpha version of this.
+
+Ha! Asa JUST mentioned a kickstart campaign.
+And you do seem to get it, but it's interesting to me that you're focusing on getting content up, which is awesome, while most of my energy is spent figuring out the logistics of people earning money for work their computer does. 
+
+Who are you targeting? ANYONE wanting to get ANY of their goods/arts out? Or mainly art? Will you charge or have advertising. Don't feel you need to answer all of these things - I'll figure it out as you go - but count on me for free advertising.
+
+Yeah I am not 'getting' the 'work their computer does' - Asa asked ... do you mean along the lines of bitcoin mining?
+
+Otherwise - maybe I"ll start a sister company for 'content' Ha
+The target is *all* digital content. The 'work' is uploading to customers: you get paid for successful delivery of content to people who've paid for it
+Which your computer does, without your help <generally>, so it's automatic income, in a way.
+
+Gotcha
+Example: your album costs $10, you get $8 on every sale, $1 goes to the person uploading it, $1 goes to network overhead (with a reasonable profit margin). More or less like the iTunes store, but much less overhead. 
+The other fun detail is piracy: pirates have your album too, and they can pay you for it by uploading it.
+And then, once they've paid, they own it, and they make money the same as everyone else.
+
+So you are blocking that? That is part of your service?
+I'm using existing piracy (the people who already pirated your album) and blocking new piracy on my network (so they can't get it free from here), and giving them a way to pay you back for it, and a good reason to do so.
+Make sense?
+
+Nice
+
+yes
+Awesome!
+
+It's not a simple concept and I can't wait to see it in action
+
+It will be easier for me to get in it's entirety that way - rather
+
+it's not simple to explain.
+Think about it, it gets simpler. To get it down I literally had to journal out all the random related thoughts, so I know it's difficult, but the important questions are 'what's a better way?' and 'what happens when we go that way?'
+What's a better way than DRM, napster lawsuits, etc? What happens when people have better access and a default way to pay for their content?
+BTW, I need evangelists for this, so if you're passionate about it and the directions it can go, I'll do everything I can to help you spread the word. 
+
+I"m in
+
+Love promoting good shit
+
+And I can reach about 800 people thorough social media and email - that I personally know and are clever and artistic
+
+photographers, musicians, bloggers, journalists, directors, etc...
+
+ck my friends/family: Jane Rosemont
+
+Luke Poling
+
+Kalon Baughan
+
+Dominic Davis (plays w/ Jack White)
+
+etc...
+
+The potential of reaching 100,000 quickly is quite possible.
+Awesome! Start mentioning it if you like, and I'll get the site up and running so they have something to see. 
+
+I won't mention it until I have something solid and know what the hell I"m talking about -
+
+I like to be solid
+
+You shouldn't have to leave the house to make $ and support you and the kidletts.
+
+Now I need my own evil empire.
+
+Hmmmmm
+Excellent! Then I'll get the site up, and in the meantime I'll get you some of the good explanations other people have understood.
+The domain registered is www.expletive project.com
+Fucking autocorrect
+
+ha
+
+Now THAT is an expletive
+Www.expletive project.com
+Www.expletiveproject.com
+There we go
+And it's because I literally refer to this as 'that fucking project', because it's really a beast.
+
+Sounds like it
+
+Well, best of luck
+
+Hope i can help
+Thanks! I think you can. And I'll get this shit operational ASAP. 
+
+I appreciate being able to help out - get my own gray matter electrified
+Many hands, light work, many brains, big ideas.
+
+
+
+
+
+
+
+
+
+OK, so short version is: special peer network that you earn money on by uploading to buyers.
+basically, I'm outsourcing the content hosting and delivery to the users- and paying them for it.
+
+it's a surprisingly difficult set of problems to solve. involving money means there's tons of incentive, at every level, for cheating, and even without that, it's really small transactions, really often.
+
+which even google has thrown up their hands and said "fuck it" and given up on everything smaller than $10
+the way I'm doing it is less exact, but a great deal smaller, and I think it's workable.
+Also, having money- or, data about money- lets the whole network have two methods of optimization, which means it *should* work substantially faster than traditional peer networks.
+
+Basically, all you need to know is this: buy something from this network, and you make money uploading that same thing to the other buyers. Buy it somewhere else, and you pay for a small overhead fee and then you get money for it (because the network costs money to run). Pirate it, you have to earn the content- which you can do by uploading. and even if you don't do *any* of that, there's a section where you just click 'yes' on a checkbox next to text that says "use my computer to host content I don't have access to", and your computer will find stuff that is scarce on the network and that it has a good chance of profiting from uploading, and the network will use your computer for hosting that, and you get paid for it.
+
+make sense?

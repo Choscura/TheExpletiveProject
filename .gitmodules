@@ -1,0 +1,6 @@
+[submodule "qBittorrent"]
+	path = qBittorrent
+	url = https://github.com/qbittorrent/qBittorrent.git
+[submodule "python-getting-started"]
+	path = python-getting-started
+	url = https://github.com/heroku/python-getting-started.git
