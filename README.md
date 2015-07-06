@@ -2,7 +2,7 @@
 
 Purpose:
 
-This project is intended to be a startup (to make money) by implementing a solution to the problems of piracy and digital content delivery. 
+This project is intended to be a startup (to make money) by implementing a solution to the problems of piracy and digital content delivery.
 
 Description of Function:
 
@@ -33,9 +33,9 @@ Now, on the back end of this there is some spooky black magic that I've been wor
 
 I haven't registered this as a business, and won't until there's more than me working on it, or until I have income to report from it. 
 
-So far, there are people who have committed to being users, but there is nothing for them to use.
+So far, there are people who have committed to being users (some customers, some sellers, some evangelists), but there is nothing for them to use.
 
-If you do something that makes the company, the split is 50% gets held by the company, and the rest of the profit is divided among each employee. The 50% taken by the company is the operating capital
+If you do something that makes the company, the split is 50% gets held by the company, and the rest of the profit is divided among each employee. The 50% taken by the company is the operating capital.
 
 #Philosophies
 
@@ -43,14 +43,14 @@ As a general principle, I think you should get what you earn. So I have ideas fo
 
 So, there are perhaps 5-6 billion people online, but only 2 billion participating in the online economy. Part of the problem seems to be that there is no way, by default, to participate; but since the delivery of content is such a standard transaction, and since it can be monetized this way, it gives the content delivery networks the advantage of human ingenuity over its predecessor networks; this is a network type that can literally accomodate a sneakernet as a delivery mechanism for its content.
 
-There is also an infinite wellspring of potential that comes from having this sort of availability of data, whether it's kids in asia learning English from playing CounterStrike or StarCraft or the mom and pop shops who can operate a photo studio thanks to a pirated copy of photoshop on their workhorse Pentium 3. By not facilitating this, the traditional distribution economy incurs unnecessary opportunity cost; but by the piracy that solves it, the opportunity costs are simply inflicted on the content creators. This seems to offer a good solution; so this project is the implementation of that solution.
+There is also an infinite wellspring of potential that comes from having this sort of availability of data, whether it's kids in asia learning English from playing CounterStrike or StarCraft or the mom and pop shops who can operate a photo studio thanks to a pirated copy of photoshop on their workhorse Pentium 3. By not facilitating this, the traditional distribution economy incurs unnecessary opportunity cost; but by the piracy that solves it by inflicting the opportunity costson the content creators. A good solution is to use piracy as the means of distribution to customers- so this project is the implementation of that solution.
 
-This project is simply the first of many that will implement experimental methods of monetizing this wellspring of opportunity. I think this can be used to cure AIDS and cancer and end world hunger, not by itself, but as a first step in the process of getting ourselves to the point where we can do it independently everywhere. But having a first step- a high performance authenticated distributed network- is the kind of thing you can build on, to do distributed computing, perhaps, for things like HIV and Cancer research. so to that extent, it is a humanitarian project as well.
+This project is simply the first of many that will implement experimental methods of monetizing this wellspring of opportunity. I think this can be used to cure AIDS and cancer and end world hunger, not by itself, but as a first step in the process of getting ourselves to the point where we can do it independently everywhere. Having a first step- like a high performance authenticated distributed network- is the kind of thing you can build on, to do distributed computing for things like HIV and Cancer research. so to that extent, this is a humanitarian project as well.
 
 #Contributors
 
-Just me, at present (June 30, 2015, 4:39 PM). My name is Kendall. I'm an overgrown child prodigy manchild living in a basement in Portland. From here, I'm literally planning how to colonize space, terraform somalia and end world hunger- among other things. I lived in Thailand for 8 years, 3 as a missionary, 5 as a business owner, and 3 as an illegal immigrant. I have two kids, I'm a single dad, I speak... like four languages at any given time. So, yeah, I'm weird. And I'll do all of this alone if I have to. Because I know this solution fucking works, whether you're competing with pirated software in rural China or Steam in rural Connecticut.
+Just me, at present (June 30, 2015, 4:39 PM). My name is Kendall. I'm a prodigy manchild living in a basement in Portland. From here, I'm literally planning how to colonize space, terraform somalia and end world hunger- among other things. I lived in Thailand for 8 years, 3 as a missionary, 5 as a business owner, and 3 as an illegal immigrant. I have two kids, I'm a single dad, I speak... like four languages at any given time. So, yeah, I'm weird. And I'll do all of this alone if I have to. Because I know this solution fucking works, whether you're competing with pirated software in rural China or Steam in rural Connecticut.
 
-So, this is a single step on a relatively modest roadmap I have, mentioned above. As far as progression along it goes, every step on it is aimed at solving some major fundamental problem encountered by some, all, or most of the human species. From the launching point of this step, I think there is the possibility to address a large number of these problems, and I hold as a necessity the idea that any solution be self-sustaining, and the philosophical ideal that as much as possible should be fair. So I'm interested in implementing these solutions as businesses so they remain self-sustaining enough to continue being solutions later on.
+I'v got a roadmap and I'm taking the backroads to stay off the radar. As far as progression along it goes, every step on it is aimed at solving some major fundamental problem encountered by some, most, or all of the human species. From this launch point, I will try to address a large number of these problems, and I hold as a necessity the idea that any solution be self-sustaining, and the philosophical ideal that as much as possible should be fair, if not all, outright. So I'm interested in implementing these solutions as businesses so they remain self-sustaining enough to continue being solutions later on.
 
 I'm in over my head- but I've always been in over my head, and I've got fucking flippers. Seeking applications from anybody with gills who knows what to do.
