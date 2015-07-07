@@ -43,6 +43,7 @@ class User:
 class Node:
 	"""
 	nodes are computers on the network.
+	A node holds data (the content pieces, assembled into the content that the user bought or pirated, which are supplied to the network), processes input (user Authentication), and takes actions (sending and receiving content pieces, authenticating with the central server, etc). 
 	"""
 	def read(self):
 		pass
