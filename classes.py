@@ -61,6 +61,27 @@ class Content:
 	Content is the stuff people make and put up for sale. 
 
 	The structure of content is this: 
+		content is a "doubletree", where branches dictate version and platform.
+			"version" branches dictate *specific attributes*.
+				eg, Battlefield Vietnam Version 0:
+					American "bombardier" class includes M-14 and m-79 grenade launcher <overpowered in online gameplay>
+				Battlefield Vietnam Version 1:
+					American "bombardier" has low powered 'standard' weapon (m1 carbine? not sure) and higher power "anti-armor" weapon to adjust multiplayer variables
+			"platform" branches dictate *specific implementations*
+				Macintosh
+					direct3d v0
+					direct3d v1
+					etc
+				Windows
+					directx 9
+					directx 10
+					etc
+				Linux
+					openGL 5
+					openGL 6
+					etc
+				etc
+
 	"""	
 	def read(self):
 		pass
