@@ -5,10 +5,12 @@ import (
 	"fmt"
 )
 
-type Piece struct {
+//Content Pieces, the small packets of data the network transfers.
+type Content_Piece struct {
 	id string
 }
 
+//Content, the specifications for assembling content pieces into items for sale.
 type Content struct {
 	id string
 }
