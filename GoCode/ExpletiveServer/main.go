@@ -15,8 +15,10 @@ type Content struct {
 	id string
 }
 
+//Users are accounts representing people. Philosophically, it should be one user per person,
+// but it should also be acknowledged that this isn't always the case.
 type User struct {
-	id string
+	id, email, username, passhash string
 }
 
 func main() {
