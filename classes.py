@@ -97,20 +97,23 @@ class ConPiece:
 	"""
 	a ConPiece, or Content Piece, is the individual packet of data transferred between nodes of the network.
 	"""
-	Piece_ID = "" 				#UniqueID of this piece.
-	Piece_FormatType = ""		#The filetype (size- determined compression block, discrete file, etc)
-	Size = 0 					#integer, if you can type it. It needs to represent the size, in bytes
-	Value = 0.0					#the value of one complete/successful/verified/permitted transfer of one piece. Used to calculate payment. **More Research Needed**
+	Piece_ID 			= 	"" 				#	UniqueID of this piece.
+	Piece_FormatType 	= 	""				#	The filetype (size- determined compression block, discrete file, etc)
+	Size 				= 	0 				#	integer, if you can type it. It needs to represent the size, in bytes
+	Value 				= 	0.0				#	the value of one complete/successful/verified/permitted transfer of one piece. Used to calculate payment. **More Research Needed**
+	
 	#data members where client and server use the same variables, but for local tasks
-	Seeders = 0					#int or longint, depending on scale
-	leechers = 0				#""
-	Downloaders = 0				#""
-	Pirates = 0					# OK, some explanation: because pirates save the network money, they preferentially are at the front of the line, all attributes being equal.
+	Seeders 			= 	0				#	int or longint, depending on scale
+	leechers 			= 	0				#	""
+	Downloaders 		= 	0				#	""
+	Pirates 			= 	0				#	 OK, some explanation: because pirates save the network money, they preferentially are at the front of the line, all attributes being equal.
+	
 	#data members used only by the client
-	successful_uploads = 0 		#tracking how many times a given piece has been successfully uploaded, for money.
-	attempted_uploads = 0		#tracking how many times a given piece has been unsuccessfully uploaded, for no money.
-	network_density = 0 		#tracking how many nodes on the network are also attempting to upload said file
+	successful_uploads 	= 	0 				#	tracking how many times a given piece has been successfully uploaded, for money.
+	attempted_uploads 	= 	0				#	tracking how many times a given piece has been unsuccessfully uploaded, for no money.
+	network_density 	= 	0 				#	tracking how many nodes on the network are also attempting to upload said file
 	#data members used only be the server
+	
 	#initialize
 	def __init__(self):
 		pass
@@ -130,7 +133,10 @@ class Media:
 
 	**More Research Needed**
 	"""
-	
+	Media_ID 		= ""				#	tracking ID. 
+	Media_Name 		= ""				#	a name for humans to track.
+	Media_Val 		= ""				#	the actual stuff that the media represents. 
+	Media_Type 		= ""				#	the actual type of 				
 	def read(self):
 		pass
 	def update(self):
