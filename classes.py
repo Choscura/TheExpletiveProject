@@ -169,7 +169,8 @@ class Media:
 	Media_ID 			= 	""				#	tracking ID. 
 	Media_Name 			= 	""				#	a name for humans to track.
 	Media_Val 			= 	""				#	the actual stuff that the media represents. 
-	Media_Type 			= 	""				#	the actual type of the media in question.		
+	Media_Type 			= 	""				#	the actual type of the media in question
+	Content_ID			=	""				#	ID of the content the media is in relation to
 	def read(self):
 		pass
 	def update(self):
