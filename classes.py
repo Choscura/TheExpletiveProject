@@ -4,6 +4,7 @@ classes.py
 This is a rough prototype of the discrete data entities in this project. It's intended more to be a reference than a functioning prototype, but it 
 should run and you should be able to perform basic tests with it for your own understanding.
 
+And, Welcome. Lets kick some ass.
 
 """
 
@@ -59,6 +60,7 @@ class User:
 	def delete(self):
 		pass
 
+
 class Node:
 	"""
 	nodes are computers on the network.
@@ -68,11 +70,15 @@ class Node:
 	user_credentials 	= 	"" 				# 	a representation of the username/pass the node proves it has
 	content 			= 	{}				# 	a dictionary of the content- ID and Path : key and value
 
-	#Node internal logic
-	Filepath			=	""				#	The default directory where files are searched for from.  Should include a 'gitignore' knockoff to not include local files.
-	FUCKYOUGITHUB		= 	"Why the fuck are my git commits not showing up?"
+	#Node internal attributes
+	File_Path			=	""				#	The default directory where files are searched for from.  Should include a 'gitignore' knockoff to not include local files.
+	Local_Files			=	{}				#	A dictionary of the local files- {Content_ID: directory location} pairing
+
+	#server specific attributes
 
 	#Functions
+	def __init__(self):
+		pass
 	def read(self):
 		pass
 	def update(self):
@@ -93,26 +99,24 @@ class Content:
 				Battlefield Vietnam Version 1:
 					American "bombardier" has low powered 'standard' weapon (m1 carbine? not sure) and higher power "anti-armor" weapon to adjust multiplayer variables
 			"platform" branches dictate *specific implementations*
-				Macintosh
-					direct3d v0
-					direct3d v1
-					etc
-				Windows
-					directx 9
-					directx 10
-					etc
-				Linux
-					openGL 5
-					openGL 6
-					etc
-				etc
+				Mac, PC, Linux, PS4, iPad, etc
+
 
 		This stricture sounds complicated, but the idea is to implement versions on platform, and so there are two tools to update 
 
 	"""	
+	
 	#Base Attributes
-	Content_Name 			=		""			#	Content Name
-	Content_ID				=		""			#	Content unique
+	Content_Name 			=		""			#	Content Name, for humans to refer to it by.
+	Content_ID				=		""			#	Content unique identifier, for machines to use.
+	Content_Description		= 		""			#	a brief (tweet length) description of what it is, for humans to use
+	Content_PieceTree		=		""			#	A tree that describes the structure of the content.  This is what becomes a tracker on the server
+
+	#Fiscal attributes
+	Content_Price			=		0.0			#	Monetary price to buy a single instance of the content.
+	Content_version			=		{}			#	
+
+
 	def read(self):
 		pass
 	def update(self):
