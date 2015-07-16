@@ -37,6 +37,22 @@ So far, there are people who have committed to being users (some customers, some
 
 If you do something that makes the company, the split is 50% gets held by the company, and the rest of the profit is divided among each employee. The 50% taken by the company is the operating capital.
 
+Update: 7/15/15
+
+This project needs to have a EULA.  Since it is open-source, at least to the extent that you're reading this right now, I figure I can put some ideas up and if any of them piss people off too much, I can change them later.
+
+basics:
+
+By signing up, you agree to participate on the terms that this network specifies. These specifications all have a purpose; their aim is to protect the network first, and the individual users (including affiliates, members of Expletive Interactive, ad nauseum) second. There are no exceptions to these rules.
+
+By downloading content, you undestand and agree to the following:
+	to allow your computer to report to the network what the source of that content was; this is to let that source get paid.
+
+By uploading content, you understand and agree to the following:
+	that the content you have arranged, to the best of your ability, to upload exactly the content that is being requested, and have not added or removed any part of it, for any reason
+		that further, if you upload abusive content- including but not limited to content which deliberately manipulates the network for your own financial gain, for the targeted financial loss of another, or which attacks members of the network in any other way- for any reason- then the budget that will be allocated to interdicting you will be twice the opportunity cost your behavior on the network has inflicted, and any means that are legally available in any location you may be will be utilized, within the scope of that budget, to prevent you from continuing such actions.
+
+
 #Philosophies
 
 As a general principle, I think you should get what you earn. So I have ideas for calculating how much everything in this project might conceivably be worth. Example: if you make the only client program for this network on your platform, you get some commission on every new unique customer from that platform, or something cool like that. Lets make this fair, but lets give people a reason to participate.
