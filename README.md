@@ -55,7 +55,7 @@ By uploading content, you understand and agree to the following:
 
 #Philosophies
 
-As a general principle, I think you should get what you earn. So I have ideas for calculating how much everything in this project might conceivably be worth. Example: if you make the only client program for this network on your platform, you get some commission on every new unique customer from that platform, or something cool like that. Lets make this fair, but lets give people a reason to participate.
+As a general principle, I think you should get what you earn. So I have ideas for calculating how much everything in this project might conceivably be worth. Example: if you make the only client program for this network on your platform, you get some commission on every new unique customer from that platform, or something cool like that. Let's make this fair, but let's give people a reason to participate.
 
 So, there are perhaps 5-6 billion people online, but only 2 billion participating in the online economy. Part of the problem seems to be that there is no way, by default, to participate; but since the delivery of content is such a standard transaction, and since it can be monetized this way, it gives the content delivery networks the advantage of human ingenuity over its predecessor networks; this is a network type that can literally accomodate a sneakernet as a delivery mechanism for its content.
 

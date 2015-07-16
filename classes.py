@@ -34,7 +34,7 @@ class User:
 	#User Cultural and National Identity attributes
 	Languages 			=	{}				#	never assume somebody only speaks as few languages as you do.
 	Interface_Language 	=	""				#	Still, everybody has a preferred default.
-	Time_Zone			=	"London, UK"	#	The default time zone the user sees all things in relation to <default London, UK, because it's +0 GMT>
+	Time_Zone			=	"London, UK"	#	The user's time zone <default London, UK, because it's +0 GMT>
 	Country				=	""				#
 
 	#Network attributes
@@ -71,8 +71,8 @@ class Node:
 	content 			= 	{}				# 	a dictionary of the content- ID and Path : key and value
 
 	#Node internal attributes
-	File_Path			=	""				#	The default directory where files are searched for from.  Should include a 'gitignore' knockoff to not include local files.
-	Local_Files			=	{}				#	A dictionary of the local files- {Content_ID: directory location} pairing
+	File_Path			=	""				#	default directory.  Should have a 'gitignore' knockoff for local files.
+	Local_Files			=	{}				#	Dict of  local files- {Content_ID: directory location} pairing
 
 	#server specific attributes
 
@@ -93,15 +93,8 @@ class Content:
 
 	The structure of content is this: 
 		content is a "doubletree", where branches dictate version and platform.
-			"version" branches dictate *specific attributes*.
-				eg, Battlefield Vietnam Version 0:
-					American "bombardier" class includes M-14 and m-79 grenade launcher <overpowered in online gameplay>
-				Battlefield Vietnam Version 1:
-					American "bombardier" has low powered 'standard' weapon (m1 carbine? not sure) and higher power "anti-armor" weapon to adjust multiplayer variables
-			"platform" branches dictate *specific implementations*
-				Mac, PC, Linux, PS4, iPad, etc
-
-
+			"version" branches dictate *specific attributes*- 
+			"platform" branches dictate *specific implementations*- mac vs Windows vs Linux, etc
 		This stricture sounds complicated, but the idea is to implement versions on platform, and so there are two tools to update 
 
 	"""	
@@ -125,20 +118,21 @@ class Content:
 		pass
 	pass
 
-class ConPiece:
+class ContentPiece:
 	"""
-	a ConPiece, or Content Piece, is the individual packet of data transferred between nodes of the network.
+	A ContentPiece is the individual packet of data transferred between nodes of the network.
 	"""
 	Piece_ID 			= 	"" 				#	UniqueID of this piece.
 	Piece_FormatType 	= 	""				#	The filetype (size- determined compression block, discrete file, etc)
 	Size 				= 	0 				#	integer, if you can type it. It needs to represent the size, in bytes
-	Value 				= 	0.0				#	the value of one complete/successful/verified/permitted transfer of one piece. Used to calculate payment. **More Research Needed**
+	Value 				= 	0.0				#	the value of one successful transfer. Used to calculate payment.
 	
 	#data members where client and server use the same variables, but for local tasks
 	Seeders 			= 	0				#	int or longint, depending on scale
 	leechers 			= 	0				#	""
 	Downloaders 		= 	0				#	""
-	Pirates 			= 	0				#	 OK, some explanation: because pirates save the network money, they preferentially are at the front of the line, all attributes being equal.
+	Pirates 			= 	0				#	integer number of pirates uploading this piece
+	LastCheck			=	""				# 	datetime of the last time these variables were updated
 	
 	#data members used only by the client
 	successful_uploads 	= 	0 				#	tracking how many times a given piece has been successfully uploaded, for money.
@@ -147,6 +141,7 @@ class ConPiece:
 	
 	#data members used only be the server
 	
+
 	#initialize
 	def __init__(self):
 		pass
@@ -156,7 +151,7 @@ class ConPiece:
 		pass
 	def delete(self):
 		pass
-	pass	
+		
 
 
 
@@ -171,13 +166,16 @@ class Media:
 	Media_Val 			= 	""				#	the actual stuff that the media represents. 
 	Media_Type 			= 	""				#	the actual type of the media in question
 	Content_ID			=	""				#	ID of the content the media is in relation to
+	
+	def __init__(self):
+		pass
 	def read(self):
 		pass
 	def update(self):
 		pass
 	def delete(self):
 		pass
-	pass
+	
 
 class Authentication:
 	"""
