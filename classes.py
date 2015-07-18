@@ -31,23 +31,25 @@ class User:
 	Username 			= 	""				#	username
 	email 				= 	""				#	email address
 	
-	#User Cultural and National Identity attributes
+	#	User Cultural and National Identity attributes
 	Languages 			=	{}				#	never assume somebody only speaks as few languages as you do.
 	Interface_Language 	=	""				#	Still, everybody has a preferred default.
 	Time_Zone			=	"London, UK"	#	The user's time zone <default London, UK, because it's +0 GMT>
 	Country				=	""				#
 
-	#Network attributes
+	#	Website attributes
+
+	#	Network attributes
 	User_Nodes			=	{}				#	set of all nodes that have historically used this user's credentials
 
 
-	#User Fiscal Attributes
+	#	User Fiscal Attributes
 	User_Local_Currency =	""				# 	what the default unit is for earned income
 	Earned_Income 		= 	0.0				# 	How much money a user has earned
 	Accumulated_Debt	=	0.0				#	How much the user has that they still need to pay for
 	Connected_Accounts	=	{}				#	Which financial institution accounts are connected to this one
 
-	#User Functions
+	#	User Functions
 	def __init__(self):
 		"""
 		in production, this needs to handle user acount generation and adding users to the program logic from memory. For now, though, the idea is to start with a function that can be called to generate "test users".
@@ -166,6 +168,10 @@ class Media:
 	Media_Val 			= 	""				#	the actual stuff that the media represents. 
 	Media_Type 			= 	""				#	the actual type of the media in question
 	Content_ID			=	""				#	ID of the content the media is in relation to
+
+	#security stuff, so different people can have different media
+	Media_Owner_Account	=	""				#	ID of the User who owns the content/media in question
+
 	
 	def __init__(self):
 		pass
@@ -181,11 +187,13 @@ class Authentication:
 	"""
 	Authentication is how the network tracks who's who, has what, and has sent which, when and to whom.  It consists of a set of keys that are recycled, and the combinations of which correlate to an interior database for record keeping. there are other parts to this, mostly based around making it difficult to predict, intercept, decipher, and use, even in long-term attacks, and so for the long term players the idea is to send them on a rat race of the same data over and over, and to change what it means every time. In old-school encryption terms, the idea is to keep anybody outside at a permanent depth of one (ref leo marks between silk and cyanide).
 	"""
+	def __init__(self):
+		pass
 	def read(self):
 		pass
 	def update(self):
 		pass
 	def delete(self):
 		pass
-	pass
+	
 
