@@ -27,30 +27,31 @@ class User:
 			Do unto others, after all.
 	"""
 	
-	UID 				= 	"" 				#	Unique Identification. every user is unique.
-	Username 			= 	""				#	username
-	email 				= 	""				#	email address
+	UID 						= 	"" 				#	Unique Identification. every user is unique.
+	Username 					= 	""				#	username
+	email 						= 	""				#	email address
 	
 	#	User Cultural and National Identity attributes
-	Languages 			=	{}				#	never assume somebody only speaks as few languages as you do.
-	Interface_Language 	=	""				#	Still, everybody has a preferred default.
-	Time_Zone			=	"London, UK"	#	The user's time zone <default London, UK, because it's +0 GMT>
-	Country				=	""				#
+	Languages 					=	{}				#	never assume somebody only speaks as few languages as you do.
+	Interface_Language 			=	""				#	Still, everybody has a preferred default.
+	Time_Zone					=	"London, UK"	#	The user's time zone <default London, UK, because it's +0 GMT>
+	Country						=	""				#
 
 	#	Website attributes
+	Administrator_Privileges	=	{}				#
 
 	#	Network attributes
-	User_Nodes			=	{}				#	set of all nodes that have historically used this user's credentials
+	User_Nodes					=	{}				#	set of all nodes that have historically used this user's credentials
 
 
 	#	User Fiscal Attributes
-	User_Local_Currency =	""				# 	what the default unit is for earned income
-	Earned_Income 		= 	0.0				# 	How much money a user has earned
-	Accumulated_Debt	=	0.0				#	How much the user has that they still need to pay for
-	Connected_Accounts	=	{}				#	Which financial institution accounts are connected to this one
+	User_Local_Currency 		=	""				# 	what the default unit is for earned income
+	Earned_Income 				= 	0.0				# 	How much money a user has earned
+	Accumulated_Debt			=	0.0				#	How much the user has that they still need to pay for
+	Connected_Accounts			=	{}				#	Which financial institution accounts are connected to this one
 
 	#	User Functions
-	def __init__(self):
+	def __init__(self, ):
 		"""
 		in production, this needs to handle user acount generation and adding users to the program logic from memory. For now, though, the idea is to start with a function that can be called to generate "test users".
 		"""
@@ -60,6 +61,8 @@ class User:
 	def update(self):
 		pass
 	def delete(self):
+		pass
+	def login (self, password):
 		pass
 
 
@@ -129,19 +132,19 @@ class ContentPiece:
 	Size 				= 	0 				#	integer, if you can type it. It needs to represent the size, in bytes
 	Value 				= 	0.0				#	the value of one successful transfer. Used to calculate payment.
 	
-	#data members where client and server use the same variables, but for local tasks
+	#	data members where client and server use the same variables, but for local tasks
 	Seeders 			= 	0				#	int or longint, depending on scale
 	leechers 			= 	0				#	""
 	Downloaders 		= 	0				#	""
 	Pirates 			= 	0				#	integer number of pirates uploading this piece
 	LastCheck			=	""				# 	datetime of the last time these variables were updated
 	
-	#data members used only by the client
-	successful_uploads 	= 	0 				#	tracking how many times a given piece has been successfully uploaded, for money.
-	attempted_uploads 	= 	0				#	tracking how many times a given piece has been unsuccessfully uploaded, for no money.
-	network_density 	= 	0 				#	tracking how many nodes on the network are also attempting to upload said file
+	#	data members used only by the client
+	successful_uploads 	= 	0 				#	tracking successful uploads for money.
+	attempted_uploads 	= 	0				#	tracking unsuccessful upload attempts
+	network_density 	= 	0 				#	tracking number of nodes attempting to upload this piece
 	
-	#data members used only be the server
+	#	data members used only be the server
 	
 
 	#initialize
@@ -187,6 +190,11 @@ class Authentication:
 	"""
 	Authentication is how the network tracks who's who, has what, and has sent which, when and to whom.  It consists of a set of keys that are recycled, and the combinations of which correlate to an interior database for record keeping. there are other parts to this, mostly based around making it difficult to predict, intercept, decipher, and use, even in long-term attacks, and so for the long term players the idea is to send them on a rat race of the same data over and over, and to change what it means every time. In old-school encryption terms, the idea is to keep anybody outside at a permanent depth of one (ref leo marks between silk and cyanide).
 	"""
+	# Attributes
+	UniqueID 		=		""		#	the ID of the Authentication object
+	UserID 			=		""		#	the ID of the user who holds it (proxy ID)
+	log 			=		{}		#	a log of instances where this key has been used to sign a transfer
+
 	def __init__(self):
 		pass
 	def read(self):
