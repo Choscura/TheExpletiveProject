@@ -204,4 +204,10 @@ class Authentication:
 	def delete(self):
 		pass
 	
+class Money:
+	"""
+		Money is the stuff everybody wants.
+	"""
+	Currency_ID = ""
+	Currency_Name = ""
 
