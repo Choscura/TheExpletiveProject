@@ -206,8 +206,28 @@ class Authentication:
 	
 class Money:
 	"""
-		Money is the stuff everybody wants.
-	"""
-	Currency_ID = ""
-	Currency_Name = ""
+		Money is the stuff everybody wants. 
 
+		A "Money" is an object that describes the value for a ContentPiece. Value is determined by dividing the content by the number of bits- or failing that, bytes- arriving at a base value per bit- and then this is multiplied by the size of each ContentPiece to determine the size of each of their moneys.
+
+		Linguistic note for humans: singular "Money", plural "Moneys".
+
+		This class describes arbitrary amounts of value, in specific currencies, for specific ContentPiece instances. This is important, because a foundational premise of this network is the idea that transactions can be infinitely arbitrarily sized- to the extreme low end, and to the extreme high end.
+
+		When Content iterates (new versions), Moneys need to be recalculated.
+
+		Hmm. That smells like bullshit. Maybe there's a better way than that.
+
+		Anyway, this is a server attribute.  Moneys are assigned centrally, upon verification.  A transfer that can't be verified can't be paid for, logically, because it opens the system up to paying out outputs that have no input.
+
+		However, there is one thing the client side of the network can know about money: The amount.  This allows a client node to make decisions based on fiscal outcomes.  This is how money is used in the network as a dimension of data along which more efficient transfers can be optimized, rather than simply the scarcity model used in traditional peer networks.
+	"""
+	#	base attributes
+	Currency_ID 			= 			""
+	Currency_Name 			= 			""
+	Content_ID 				= 			""
+
+	#	Server-only Attributes
+	
+
+	#	Client side attribuets
