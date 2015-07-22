@@ -8,6 +8,18 @@ And, Welcome. Lets kick some ass.
 
 """
 
+def IDMAKER(Keyspace):
+	"""assumes a text-formatted ID.  Just for simplicity."""
+	try:
+		#print("try began")
+		return(int(Keyspace) + 1)
+	except:
+		print("something's fucked! \n\n Value entered was: " + Keyspace + "\n\nHappy Debugging!")
+
+
+IDMAKER("10")
+
+
 class User:
 	"""
 	Users are people. People have money, content, and computers.
@@ -55,6 +67,8 @@ class User:
 		"""
 		in production, this needs to handle user acount generation and adding users to the program logic from memory. For now, though, the idea is to start with a function that can be called to generate "test users".
 		"""
+
+
 		pass
 	def read(self):
 		pass
