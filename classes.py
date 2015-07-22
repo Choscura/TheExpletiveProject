@@ -228,6 +228,8 @@ class Money:
 	Content_ID 				= 			""
 
 	#	Server-only Attributes
-	
+	Cash_Value 				=			0.0			#this is a double by default (MORE RESEARCH NEEDED), 
+
 
 	#	Client side attribuets
+	HashKey					=			""
