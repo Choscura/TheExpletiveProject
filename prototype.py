@@ -15,18 +15,19 @@ def __init__():
 
 #This is hows I mathing. Kawthort.
 def mathmaker(nodes, pirates, songs, price, share, customers):		#nodes are the compters, songs are the things shared, price is cost, share is %awarded, customers is # sold
-	#sanitize data; get it all to be doubles
-	print("pirate share is: %s spread per %r pirates" %pirates, %(((((pirates/nodes) * share) * customers)/songs)-(songs*price)/pirates)
+	print("pirate share is: %s spread per pirates") %(((((pirates/nodes) * share) * customers)/songs)-(songs*price)/pirates)
 	
 	print("non-pirate share is: %s")	%(((((nodes-pirates) * share) * customers)/songs)/(nodes-pirates))
 	
 	print("network share is: %s")%((price*share) * customers)
 	
-	print("Total sales volume")
-	print(price * customers)
+	print("songs paid for by pirates that otherwise wouldn't be: %s") %(((((pirates) * price )* share)*customers)/songs) 
+
+	print("Total sales volume: %s") %(price * customers)
 
 mathmaker(100.0, 90.0, 100.0, 1.0, 0.1, 10000.0)
-#classes.IDMAKER("FUCK!")			#testing
+mathmaker(100.0, 99.0, 1.0, 1.0, 0.1, 10000.0)
+mathmaker(100.0, 99.0, 10000.0, 1.0, 0.1, 10000.0)
 
 def __main__():
 	print("derp")
