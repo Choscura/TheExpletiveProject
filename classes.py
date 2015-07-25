@@ -1,13 +1,17 @@
 """
 classes.py
 
-This is a rough prototype of the discrete data entities in this project. It's intended more to be a reference than a functioning prototype, but it 
-should run and you should be able to perform basic tests with it for your own understanding.
+This is a rough prototype of the discrete data entities in this project. It's intended more to be a reference than a functioning prototype, but it should run and you should be able to perform basic tests with it for your own understanding.
+
+	I'm making it for mine too, to start.  It's to make the way ahead clear. Some people can't intuitively get the math, and I can't express math with mathematical language with any efficiency, but I can build this fucking thing.
+
+
 
 And, Welcome. Lets kick some ass.
 
 """
 
+#This is a function to generate integer ID's that will probably be unique within a given keyspace. Basically just sequential keys.
 def IDMAKER(Keyspace):
 	"""assumes a text-formatted ID.  Just for simplicity."""
 	try:
@@ -15,6 +19,8 @@ def IDMAKER(Keyspace):
 		return(int(Keyspace) + 1)
 	except:
 		print("something's fucked! \n\n Value entered was: " + Keyspace + "\n\nHappy Debugging!")
+
+
 
 
 IDMAKER("10")
@@ -67,8 +73,9 @@ class User:
 		"""
 		in production, this needs to handle user acount generation and adding users to the program logic from memory. For now, though, the idea is to start with a function that can be called to generate "test users".
 		"""
-
-
+		pass
+	def __str__(self):
+		return self.username
 		pass
 	def read(self):
 		pass
@@ -93,19 +100,29 @@ class Node:
 	File_Path			=	""				#	default directory.  Should have a 'gitignore' knockoff for local files.
 	Local_Files			=	{}				#	Dict of  local files- {Content_ID: directory location} pairing
 
-	#server specific attributes
+	#server and network attributes
 
-	#Functions
-	def __init__(self):
-		pass
+
+	#	Default Functions
+	def __init__(self, mac, usercred):
+		self.mac_address = mac
+		self.user_credentials = usercred
+	def __str__(self):
+		return(self.mac_address, self.user_credentials)
 	def read(self):
 		pass
 	def update(self):
 		pass
 	def delete(self):
 		pass
-	pass
-
+	
+	#	Network behavior functions
+	def upload(self, target, ContentPiece):
+		pass
+	def Bawkserver(self, recipientkey, ContentPiece): #Inform server of successful receipt of contentpiece with x key
+		pass
+	def getkeys (self, credentials):			#get a new set of authentication keys from the server for uploading
+		pass
 class Content:
 	"""
 	Content is the stuff people make and put up for sale. 
@@ -242,7 +259,7 @@ class Money:
 	Content_ID 				= 			""
 
 	#	Server-only Attributes
-	Cash_Value 				=			0.0			#this is a double by default (MORE RESEARCH NEEDED), 
+	Cash_Value 				=			0.0			#this is a float by default (provisional early research)
 
 
 	#	Client side attribuets
