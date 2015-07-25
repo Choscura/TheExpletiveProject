@@ -21,12 +21,14 @@ def mathmaker(nodes, pirates, songs, price, share, customers):		#nodes are the c
 	
 	print("network share is: %s")%((price*share) * customers)
 	
-	print("songs paid for by pirates that otherwise wouldn't be: %s") %(((((pirates) * price )* share)*customers)/songs) 
+	print("songs paid for in full by pirates that otherwise wouldn't be: %s") %(((((pirates) * price )* share)*customers)/songs) 
 
 	print("Total sales volume: %s") %(price * customers)
 
 mathmaker(100.0, 90.0, 100.0, 1.0, 0.1, 10000.0)
-mathmaker(100.0, 99.0, 1.0, 1.0, 0.1, 10000.0)
+			# 	100 nodes, 90 of them pirates, uploading 100 different songs at $1 each for a $0.10 share, at 10k uploads 
+mathmaker(100.0, 99.0, 1.0, 1.0, 0.1, 10000.0)				
+			#
 mathmaker(100.0, 99.0, 10000.0, 1.0, 0.1, 10000.0)
 
 def __main__():
