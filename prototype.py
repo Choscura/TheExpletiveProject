@@ -1,4 +1,5 @@
 import classes
+#import mktorrent
 
 
 #Network initialization, putting together examples of all the pieces to make sure they all exist and can be used by the network.
@@ -12,6 +13,14 @@ def __init__():
 	finally:
 		pass
 
+
+
+def __main__():
+	print("derp")
+
+__main__()
+
+##below this is unimportant stuff, tests, or scratch. mostly ignore it.
 
 #This is hows I mathing. Kawthort.
 def mathmaker(nodes, pirates, songs, price, share, customers):		#nodes are the compters, songs are the things shared, price is cost, share is %awarded, customers is # sold
@@ -30,8 +39,3 @@ mathmaker(100.0, 90.0, 100.0, 1.0, 0.1, 10000.0)
 mathmaker(100.0, 99.0, 1.0, 1.0, 0.1, 10000.0)				
 			#
 mathmaker(100.0, 99.0, 10000.0, 1.0, 0.1, 10000.0)
-
-def __main__():
-	print("derp")
-
-__main__()

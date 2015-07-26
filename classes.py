@@ -186,7 +186,7 @@ class ContentPiece:
 	def update(self):
 		pass
 	def delete(self):
-		pass
+		self.dispose()
 		
 
 
