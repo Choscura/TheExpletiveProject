@@ -179,8 +179,8 @@ class ContentPiece:
 	
 
 	#initialize
-	def __init__(self):
-		pass
+	def __init__(self, ID, Size, Value):
+		self.Piece_ID= ID
 	def read(self):
 		pass
 	def update(self):
