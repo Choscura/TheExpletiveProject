@@ -5,7 +5,10 @@ import classes
 #Network initialization, putting together examples of all the pieces to make sure they all exist and can be used by the network.
 def __init__():
 	try:
-		pass
+		nodes = []
+		users = []
+		content = []
+		
 	except Exception, e:
 		raise
 	else:
@@ -17,6 +20,7 @@ def __init__():
 
 def __main__():
 	print("derp")
+
 
 __main__()
 
