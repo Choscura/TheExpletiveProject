@@ -8,7 +8,7 @@ def __init__():
 		nodes = []
 		users = []
 		content = []
-		
+
 	except Exception, e:
 		raise
 	else:
@@ -20,6 +20,7 @@ def __init__():
 
 def __main__():
 	print("derp")
+	__init__()
 
 
 __main__()
