@@ -13,6 +13,7 @@ def __init__():
 		raise
 	else:
 		pass
+		print("fuck!")
 	finally:
 		pass
 
