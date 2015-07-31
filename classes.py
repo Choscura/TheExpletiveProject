@@ -207,7 +207,8 @@ class Media:
 	Media_Owner_Account	=	""				#	ID of the User who owns the content/media in question
 
 	
-	def __init__(self):
+	def __init__(self, owner):
+		self.Media_Owner_Account = owner
 		pass
 	def read(self):
 		pass

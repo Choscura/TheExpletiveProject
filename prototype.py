@@ -3,18 +3,21 @@ import classes
 
 
 #Network initialization, putting together examples of all the pieces to make sure they all exist and can be used by the network.
+
+nodes = []
+users = []
+content = []
+
 def __init__():
 	try:
-		nodes = []
-		users = []
-		content = []
-
+		print("Derped!")
+		return()
 	except Exception, e:
 		raise
 	else:
-		pass
 		print("fuck!")
 	finally:
+		print("fuckfuck!")
 		pass
 
 
