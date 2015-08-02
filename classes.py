@@ -11,6 +11,7 @@ And, Welcome. Lets kick some ass.
 
 """
 
+
 #This is a function to generate integer ID's that will probably be unique within a given keyspace. Basically just sequential keys.
 def IDMAKER(Keyspace):
 	"""assumes a text-formatted ID.  Just for simplicity."""
@@ -20,10 +21,7 @@ def IDMAKER(Keyspace):
 	except:
 		print("something's fucked! \n\n Value entered was: " + Keyspace + "\n\nHappy Debugging!")
 
-
-
-
-IDMAKER("10")
+	#	IDMAKER("10")
 
 
 class User:
@@ -101,7 +99,7 @@ class Node:
 	Local_Files			=	{}				#	Dict of  local files- {Content_ID: directory location} pairing
 
 	#server and network attributes
-
+	Local_Keys			=	[]				#	list of keys node possesses
 
 	#	Default Functions
 	def __init__(self, mac, usercred):
