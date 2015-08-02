@@ -72,17 +72,17 @@ class User:
 		in production, this needs to handle user acount generation and adding users to the program logic from memory. For now, though, the idea is to start with a function that can be called to generate "test users".
 		"""
 		pass
+
+
 	def __str__(self):
 		return self.username
 		pass
-	def read(self):
-		pass
-	def update(self):
-		pass
-	def delete(self):
-		pass
+
+
 	def login (self, password):
 		pass
+
+
 
 
 class Node:
@@ -92,11 +92,13 @@ class Node:
 	"""
 	mac_address 		=	"" 				# 	all computers have one, although spoofing is a risk
 	user_credentials 	= 	"" 				# 	a representation of the username/pass the node proves it has
-	content 			= 	{}				# 	a dictionary of the content- ID and Path : key and value
+	content 			= 	[]				# 	a list of the content items a node has (human abstraction 'content')
+	pieces				=	[]				#	a list of the content pieces node has (network 'content' data)
 
 	#Node internal attributes
 	File_Path			=	""				#	default directory.  Should have a 'gitignore' knockoff for local files.
-	Local_Files			=	{}				#	Dict of  local files- {Content_ID: directory location} pairing
+	Local_Files			=	[]				#	list of local files
+
 
 	#server and network attributes
 	Local_Keys			=	[]				#	list of keys node possesses
