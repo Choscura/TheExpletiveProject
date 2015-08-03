@@ -12,12 +12,15 @@ And, Welcome. Lets kick some ass.
 """
 
 
-#This is a function to generate integer ID's that will probably be unique within a given keyspace. Basically just sequential keys.
 def IDMAKER(Keyspace):
-	"""assumes a text-formatted ID.  Just for simplicity."""
+	"""
+	This is a function to generate integer ID's that will probably be unique within a given keyspace. Basically just sequential keys.
+
+	assumes a text-formatted ID.  Just for simplicity."""
 	try:
 		#print("try began")
-		return(int(Keyspace) + 1)
+		Keyspace = Keyspace + 1
+		return(int(Keyspace))
 	except:
 		print("something's fucked! \n\n Value entered was: " + Keyspace + "\n\nHappy Debugging!")
 
@@ -45,44 +48,45 @@ class User:
 	
 	UID 						= 	"" 				#	Unique Identification. every user is unique.
 	Username 					= 	""				#	username
-	email 						= 	""				#	email address
+	Email 						= 	""				#	email address
 	
 	#	User Cultural and National Identity attributes
-	Languages 					=	{}				#	never assume somebody only speaks as few languages as you do.
+	Languages 					=	[]				#	list of languages user speaks
 	Interface_Language 			=	""				#	Still, everybody has a preferred default.
-	Time_Zone					=	"London, UK"	#	The user's time zone <default London, UK, because it's +0 GMT>
-	Country						=	""				#
+	Time_Zone					=	""				#	The user's time zone <default London, UK>
+	Country						=	""				#	
 
 	#	Website attributes
-	Administrator_Privileges	=	{}				#
+	Owned_Content				=	[]				#	list of content this user owns
+	Held_Content				=	[]				#	list of content this user doesn't own but has anyway
+
 
 	#	Network attributes
-	User_Nodes					=	{}				#	set of all nodes that have historically used this user's credentials
+	User_Nodes					=	[]				#	list of all nodes that this user has logged in on
 
 
 	#	User Fiscal Attributes
 	User_Local_Currency 		=	""				# 	what the default unit is for earned income
 	Earned_Income 				= 	0.0				# 	How much money a user has earned
 	Accumulated_Debt			=	0.0				#	How much the user has that they still need to pay for
-	Connected_Accounts			=	{}				#	Which financial institution accounts are connected to this one
+	Connected_Accounts			=	[]				#	List of accounts that the user can make a withdrawal to
 
 	#	User Functions
-	def __init__(self, ):
+	def __init__(self, Keyspace, Username, email, Time_Zone):
 		"""
 		in production, this needs to handle user acount generation and adding users to the program logic from memory. For now, though, the idea is to start with a function that can be called to generate "test users".
 		"""
-		pass
+		self.UID = IDMAKER(Keyspace)
+		self.Username = Username
+		self.Email = email
+		self.Time_Zone = Time_Zone
 
-
+	#	str function, so that 
 	def __str__(self):
-		return self.username
-		pass
+		return (self.UID)
 
-
-	def login (self, password):
-		pass
-
-
+User_Keyspace = 0
+TestUser = User()
 
 
 class Node:
@@ -96,7 +100,9 @@ class Node:
 	pieces				=	[]				#	a list of the content pieces node has (network 'content' data)
 
 	#Node internal attributes
-	File_Path			=	""				#	default directory.  Should have a 'gitignore' knockoff for local files.
+		#	File_Path is commented out because it's unneccessary for local testing
+	#File_Path			=	""				#	default directory.  Should have a 'gitignore' knockoff for local files.
+
 	Local_Files			=	[]				#	list of local files
 
 
@@ -123,6 +129,8 @@ class Node:
 		pass
 	def getkeys (self, credentials):			#get a new set of authentication keys from the server for uploading
 		pass
+
+
 class Content:
 	"""
 	Content is the stuff people make and put up for sale. 
@@ -153,6 +161,7 @@ class Content:
 	def delete(self):
 		pass
 	pass
+
 
 class ContentPiece:
 	"""
@@ -188,8 +197,6 @@ class ContentPiece:
 	def delete(self):
 		self.dispose()
 		
-
-
 
 class Media:
 	"""
