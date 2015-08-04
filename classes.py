@@ -72,21 +72,22 @@ class User:
 	Connected_Accounts			=	[]				#	List of accounts that the user can make a withdrawal to
 
 	#	User Functions
-	def __init__(self, Keyspace, Username, email, Time_Zone):
+	def __init__(self, Keyspace, Username, email):
 		"""
 		in production, this needs to handle user acount generation and adding users to the program logic from memory. For now, though, the idea is to start with a function that can be called to generate "test users".
 		"""
 		self.UID = IDMAKER(Keyspace)
 		self.Username = Username
 		self.Email = email
-		self.Time_Zone = Time_Zone
+#		self.Time_Zone = Time_Zone
 
 	#	str function, so that 
 	def __str__(self):
 		return (self.UID)
 
 User_Keyspace = 0
-TestUser = User()
+TestUser = User(User_Keyspace, "derp", "derp")
+
 
 
 class Node:
