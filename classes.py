@@ -83,12 +83,15 @@ class User:
 
 	#	str function, so that 
 	def __str__(self):
+		print(self.UID)
 		return (self.UID)
 
 User_Keyspace = 0
-TestUser = User(User_Keyspace, "derp", "derp")
+TestUser1 = User(User_Keyspace, "derp", "derp")
+TestUser2 = User(User_Keyspace, "derp", "derp")
 
-
+TestUser1.__str__()
+TestUser2.__str__()
 
 class Node:
 	"""
