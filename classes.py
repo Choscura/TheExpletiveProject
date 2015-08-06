@@ -18,7 +18,7 @@ def IDMAKER(Keyspace):
 
 	assumes a text-formatted ID.  Just for simplicity."""
 	try:
-		#print("try began")
+		print(Keyspace)
 		Keyspace = Keyspace + 1
 		return(int(Keyspace))
 	except:
