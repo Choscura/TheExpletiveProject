@@ -93,6 +93,9 @@ TestUser2 = User(User_Keyspace, "derp", "derp")
 TestUser1.__str__()
 TestUser2.__str__()
 
+TestUser3 = User(User_Keyspace, "derp", "derp")
+TestUser3.__str__()
+
 class Node:
 	"""
 	nodes are computers on the network.
@@ -157,7 +160,8 @@ class Content:
 	Content_Price			=		0.0			#	Monetary price to buy a single instance of the content.
 	Content_version			=		{}			#	
 
-
+	def __init__(self, Owner, ):
+		pass
 	def read(self):
 		pass
 	def update(self):
