@@ -9,8 +9,6 @@ import bencode
 
 help()
 
-modules bencode
-
 decimal_match = re.compile('\d')
 
 def bdecode(data):
