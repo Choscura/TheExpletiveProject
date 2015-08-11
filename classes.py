@@ -86,16 +86,6 @@ class User:
 		print(self.UID)
 		return (self.UID)
 
-User_Keyspace = 0
-TestUser1 = User(User_Keyspace, "derp", "derp")
-TestUser2 = User(User_Keyspace, "derp", "derp")
-
-TestUser1.__str__()
-TestUser2.__str__()
-
-TestUser3 = User(User_Keyspace, "derp", "derp")
-TestUser3.__str__()
-
 class Node:
 	"""
 	nodes are computers on the network.
@@ -280,3 +270,16 @@ class Money:
 
 	#	Client side attribuets
 	HashKey					=			""
+
+"""
+User_Keyspace = 0
+
+TestUser1 = User(User_Keyspace, "derp", "derp")
+TestUser2 = User(User_Keyspace, "derp", "derp")
+
+TestUser1.__str__()
+TestUser2.__str__()
+
+TestUser3 = User(User_Keyspace, "derp", "derp")
+TestUser3.__str__()
+"""

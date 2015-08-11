@@ -1,6 +1,6 @@
 import classes
 
-#import bs4
+import bs4
 #import mktorrent
 
 
@@ -9,6 +9,20 @@ import classes
 nodes = []
 users = []
 content = []
+
+# Building Torrent files
+
+User_Keyspace = 0
+
+TestUser1 = classes.User(User_Keyspace, "derp", "derp")
+TestUser2 = classes.User(User_Keyspace, "derp", "derp")
+
+TestUser1.__str__()
+TestUser2.__str__()
+
+TestUser3 = classes.User(User_Keyspace, "derp", "derp")
+TestUser3.__str__()
+
 
 def __init__():
 	try:
