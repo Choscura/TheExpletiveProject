@@ -12,8 +12,11 @@ content = []
 
 # Building Torrent files
 
-User_Keyspace = 0
+#User_Keyspace = 0
 
+
+#	Testing segment- if you're seeing this, something is crrently fucked.	#
+"""
 TestUser1 = classes.User(User_Keyspace, "derp", "derp")
 TestUser2 = classes.User(User_Keyspace, "derp", "derp")
 
@@ -23,7 +26,7 @@ TestUser2.__str__()
 TestUser3 = classes.User(User_Keyspace, "derp", "derp")
 TestUser3.__str__()
 
-
+"""
 def __init__():
 	try:
 		print("Derped!")
@@ -39,6 +42,8 @@ def __init__():
 
 
 def __main__():
+	User_Keyspace = 0
+
 	print("derp")
 	__init__()
 
@@ -47,6 +52,8 @@ __main__()
 
 ##below this is unimportant stuff, tests, or scratch. mostly ignore it.
 
+
+"""
 #This is hows I mathing. Kawthort.
 def mathmaker(nodes, pirates, songs, price, share, customers):		#nodes are the compters, songs are the things shared, price is cost, share is %awarded, customers is # sold
 	print("pirate share is: %s spread per pirates") %(((((pirates/nodes) * share) * customers)/songs)-(songs*price)/pirates)
@@ -64,3 +71,6 @@ mathmaker(100.0, 90.0, 100.0, 1.0, 0.1, 10000.0)
 mathmaker(100.0, 99.0, 1.0, 1.0, 0.1, 10000.0)				
 			#
 mathmaker(100.0, 99.0, 10000.0, 1.0, 0.1, 10000.0)
+
+
+"""
