@@ -30,8 +30,11 @@ TestUser3.__str__()
 def __init__():
 	try:
 		print("Derped!")
+		print"e"
 		return()
 	except Exception, e:
+		print("something fucked up")
+
 		raise
 	else:
 		print("fuck!")

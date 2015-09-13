@@ -12,7 +12,7 @@ And, Welcome. Lets kick some ass.
 """
 
 
-def IDMAKER(Keyspace):
+ndef IDMAKER(Keyspace):
 	"""
 	This is a function to generate integer ID's that will probably be unique within a given keyspace. Basically just sequential keys.
 

@@ -21,6 +21,11 @@ type User struct {
 	id, email, username, passhash string
 }
 
+type Node struct {
+	id, User_ID string
+}
+
 func main() {
 	fmt.Println("Hello World!")
+
 }
