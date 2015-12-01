@@ -12,7 +12,7 @@ And, Welcome. Lets kick some ass.
 """
 
 
-ndef IDMAKER(Keyspace):
+def IDMAKER(Keyspace):
 	"""
 	This is a function to generate integer ID's that will probably be unique within a given keyspace. Basically just sequential keys.
 
@@ -49,12 +49,13 @@ class User:
 	UID 						= 	"" 				#	Unique Identification. every user is unique.
 	Username 					= 	""				#	username
 	Email 						= 	""				#	email address
+	PhoneNumber					=	""				#	Phone number, stored as a string, formatted as [country][region][number]
 	
 	#	User Cultural and National Identity attributes
 	Languages 					=	[]				#	list of languages user speaks
 	Interface_Language 			=	""				#	Still, everybody has a preferred default.
 	Time_Zone					=	""				#	The user's time zone <default London, UK>
-	Country						=	""				#	
+	Country						=	""				#	The national borders this user is logged into from within
 
 	#	Website attributes
 	Owned_Content				=	[]				#	list of content this user owns
@@ -85,6 +86,9 @@ class User:
 	def __str__(self):
 		print(self.UID)
 		return (self.UID)
+
+	def CalculateDebt(Owned_Content, Held_Content):
+		pass
 
 class Node:
 	"""
@@ -148,22 +152,29 @@ class Content:
 
 	#Fiscal attributes
 	Content_Price			=		0.0			#	Monetary price to buy a single instance of the content.
-	Content_version			=		{}			#	
+	Content_version			=		""			#	Version ID of this content. 
+												#	TODO: version control. For now, new versions are new content.	
 
-	def __init__(self, Owner, ):
-		pass
+	def __init__(Name, Owner, ID, Description):
+		self.Content_Name = Name
+		self.Content_ID = ID
+		self.Content_Description = Description
+
+		
 	def read(self):
 		pass
 	def update(self):
 		pass
 	def delete(self):
 		pass
-	pass
+	
+	def Price_Setting(price, Content):
+		print("build successful")
 
 
 class ContentPiece:
 	"""
-	A ContentPiece is the individual packet of data transferred between nodes of the network.
+		A ContentPiece is the individual packet of data transferred between nodes of the network.
 	"""
 	Piece_ID 			= 	"" 				#	UniqueID of this piece.
 	Piece_FormatType 	= 	""				#	The filetype (size- determined compression block, discrete file, etc)
@@ -198,9 +209,7 @@ class ContentPiece:
 
 class Media:
 	"""
-	Media is web stuff that presents the content for sale on the website. By default, it describes HTML and javascript, but this is a major security hole. Maybe some workaround with another markup will work better. But for now, the prototype should show vanilla HTML. I'll add more constraints as they are needed.
-
-	**More Research Needed**
+	Media is web stuff that presents the content for sale on the website. By default, it describes HTML and javascript, but this is a major security hole. Maybe some workaround with another markup will work better. But for now, the prototype should show vanilla HTML. I'll add more constraints as they are needed. **More Research Needed**
 	"""
 	Media_ID 			= 	""				#	tracking ID. 
 	Media_Name 			= 	""				#	a name for humans to track.
@@ -225,11 +234,11 @@ class Media:
 
 class Authentication:
 	"""
-	Authentication is how the network tracks who's who, has what, and has sent which, when and to whom.  It consists of a set of keys that are recycled, and the combinations of which correlate to an interior database for record keeping. there are other parts to this, mostly based around making it difficult to predict, intercept, decipher, and use, even in long-term attacks, and so for the long term players the idea is to send them on a rat race of the same data over and over, and to change what it means every time. In old-school encryption terms, the idea is to keep anybody outside at a permanent depth of one (ref leo marks between silk and cyanide).
+	Authentication is how the network tracks who's who, has what, and has sent which, when and to whom.  It consists of a set of keys 	that are recycled, and the combinations of which correlate to an interior database for record keeping. there are other parts to this, mostly based around making it difficult to predict, intercept, decipher, and use, even in long-term attacks, and so for the long term players the idea is to send them on a rat race of the same data over and over, and to change what it means every time. In old-school encryption terms, the idea is to keep anybody outside at a permanent depth of one (ref leo marks between silk and cyanide).
 	"""
 	# Attributes
-	UniqueID 		=		""		#	the ID of the Authentication object
-	UserID 			=		""		#	the ID of the user who holds it (proxy ID)
+	UniqueID 		=		""		#	the ID of the Authentication Key
+	UserID 			=		""		#	the ID of the user who holds it
 	log 			=		{}		#	a log of instances where this key has been used to sign a transfer
 
 	def __init__(self):
