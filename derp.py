@@ -65,7 +65,7 @@ def dataprice (dataoalsize, dataoalprice):
 	print("price per byte: ", byteprice)
 
 #Simulation content for demonstration purposes
-class Content:
+class Content(object):
 	Content_ID = ""
 	Content_Name = ""
 	Content_Data = 0
@@ -83,8 +83,8 @@ class Content:
 	def __serialize__(self):
 		pass
 
-Derp = (Content)
-Derp.__Init__(Derp, 1, "Herp", 1024, 1.00)
+Derp = Content()
+Derp.__Init__(1, "Herp", 1024, 1.00)
 
 #a simulation peernode
 class PeerNode:
