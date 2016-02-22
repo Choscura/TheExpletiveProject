@@ -1,4 +1,0 @@
-"""Conflictmaybepainful,butthepainlesssolutiondoesnotexist."""
-
-#print("derp")
-

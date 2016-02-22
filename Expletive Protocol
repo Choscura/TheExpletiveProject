@@ -1,0 +1,55 @@
+Expletive Protocol
+
+Definitions:
+	Content - 	the stuff you buy. Flappy Bird, Call of Doody, Baby One More Time, etc.
+	Media	- 	the stuff on the website that presents CONTENT.  Images, video, sond, text, etc.
+	Nodes	-	the computers on the network that actually upload stuff.
+	Keys	-	unique identifiers that are issued by the server to network members to verify general transactions
+
+
+
+Server starts up
+
+	Server database layout
+		#Content
+			User author
+			price
+			size (amount of data)
+			dataprice (price per unit of data)
+		
+		#Users
+			User uniqueID
+			Password
+				3rd authentication factor?
+
+		#Nodes
+			address
+			username/pass authentication
+			issued key block
+
+		#Money Transactions
+			Payouts - Person earning money
+			Labor - event that earned them money
+			Worker - computer they did it on <or that did it>
+
+
+sales event
+	buyer buys content
+	payment is processed
+	Server verifies payment
+	server issues permission to network to upload to buyer
+Buyer connects to nework
+	if uploaders are at or below capacity
+		uploaders assemble packet
+			content piece that is most appropriate
+				calculated by scarcity vs density of content availability in network, so that duplicates aren't sent
+	elif network density over threshold
+		Uploaders assess odds of success
+			send most profitable pieces in order of probability of successful upload.
+	Buyer computer responds, sending key to uploaders that upload verified content fastest.
+	Buyer and Uploader computers connect and begin transferring files.
+	Buyer computer informs tracking server of successful receipt
+		based on network density, server calculates optimal time period for each node to wait between these connections to the server.
+		If there is a backlog, nodes inform server of value of transactions in qeue to process, so that budgeting for additional server resources can be automated
+	When Buyer's download is complete, buyer is removed from the roster of downloaders. Buyer now owns their file and can move it where they like.
+		

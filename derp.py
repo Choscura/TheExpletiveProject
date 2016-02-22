@@ -18,9 +18,10 @@ import Classes
 #random, for testing
 import random
 
+"""
 try: 
 	#set up database
-	"""
+	""""""
 	conn = sqlite3.connect('example.db')
 	c = conn.cursor()
 	# Create table
@@ -33,10 +34,9 @@ try:
 	# We can also close the connection if we are done with it.
 	# Just be sure any changes have been committed or they will be lost.
 	conn.close()
-	"""
 	print ("example DB ran")
 except:
-	print("example DB didn't run")
+	print("example DB didn't run")"""
 
 #srs DB attempt
 try :
@@ -53,6 +53,7 @@ try :
 
 
 	print("Prototype DB ran")
+	pass
 except: 
 	print("try didn't run")
 	pass
@@ -66,20 +67,24 @@ def dataprice (dataoalsize, dataoalprice):
 
 #Simulation content for demonstration purposes
 class Content(object):
-	Content_ID = ""
-	Content_Name = ""
-	Content_Data = 0
-	Content_Price = 0.0
-	Content_Byteprice = 0.0
+	Ob_List						= 		0				#This is to keep track of the number of initialized objects
+	Content_ID 					= 		""
+	Content_Name 				= 		""
+	Content_Data 				= 		0
+	Content_Price 				= 		0.0
+	Content_Byteprice 			= 		0.0
+
 	def __Init__(self, __ID__, name, data, price):
-		self.Content_ID = __ID__
-		self.Content_Name = name
-		self.Content_Data = data
-		self.Content_Price = price
-		self.Content_Byteprice = self.Content_Price / self.Content_Data
+		self.Content_ID 		= 		__ID__
+		self.Content_Name 		= 		name
+		self.Content_Data 		= 		data
+		self.Content_Price 		= 		price
+		self.Content_Byteprice 	=	 	self.Content_Price / self.Content_Data
+
 	def __str__(self):
 		#this is a function to return the values of each of the default data members as CSV
 		return  self.Content_ID, self.Content_Name, self.Content_Data, self.Content_Price, self.Content_Byteprice
+	
 	def __serialize__(self):
 		pass
 
@@ -102,7 +107,8 @@ class PeerNode:
 # Eg, users have "owned content" and "held content" (stuff they own, vs stuff they have)
 #Content creators have a list of "original content" etc. That's what this is for.
 class Content_List():
-	pass
+	Content_ID 	=		""
+	User_ID		=		""
 
 #a simulation of the server
 class server:
@@ -141,3 +147,8 @@ def __main__():
 	pass
 
 __main__()
+
+"""Conflictmaybepainful,butthepainlesssolutiondoesnotexist."""
+
+#print("derp")
+

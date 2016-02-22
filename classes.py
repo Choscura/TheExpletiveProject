@@ -253,11 +253,8 @@ class Authentication:
 class Money:
 	"""
 		Money is the stuff everybody wants. 
-
 		A "Money" is an object that describes the value for a ContentPiece. Value is determined by dividing the content by the number of bits- or failing that, bytes- arriving at a base value per bit- and then this is multiplied by the size of each ContentPiece to determine the size of each of their moneys.
-
 		Linguistic note for humans: singular "Money", plural "Moneys".
-
 		This class describes arbitrary amounts of value, in specific currencies, for specific ContentPiece instances. This is important, because a foundational premise of this network is the idea that transactions can be infinitely arbitrarily sized- to the extreme low end, and to the extreme high end.
 
 		When Content iterates (new versions), Moneys need to be recalculated.
