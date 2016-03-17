@@ -56,7 +56,7 @@ __main__()
 ##below this is unimportant stuff, tests, or scratch. mostly ignore it.
 
 
-"""
+
 #This is hows I mathing. Kawthort.
 def mathmaker(nodes, pirates, songs, price, share, customers):		#nodes are the compters, songs are the things shared, price is cost, share is %awarded, customers is # sold
 	print("pirate share is: %s spread per pirates") %(((((pirates/nodes) * share) * customers)/songs)-(songs*price)/pirates)
@@ -76,4 +76,3 @@ mathmaker(100.0, 99.0, 1.0, 1.0, 0.1, 10000.0)
 mathmaker(100.0, 99.0, 10000.0, 1.0, 0.1, 10000.0)
 
 
-"""
