@@ -5,18 +5,15 @@ This is a rough prototype of the discrete data entities in this project. It's in
 
 	I'm making it for mine too, to start.  It's to make the way ahead clear. Some people can't intuitively get the math, and I can't express math with mathematical language with any efficiency, but I can build this fucking thing.
 
-
-
-And, Welcome. Lets kick some ass.
-
 """
 
+print("classes.py began successfully")
 
 def IDMAKER(Keyspace):
 	"""
 	This is a function to generate integer ID's that will probably be unique within a given keyspace. Basically just sequential keys.
 
-	assumes a text-formatted ID.  Just for simplicity."""
+	assumes a UTF-8-formatted ID.  Just for simplicity."""
 	try:
 		print(Keyspace)
 		Keyspace = Keyspace + 1
@@ -28,7 +25,7 @@ def IDMAKER(Keyspace):
 
 
 class User:
-	"""
+        """
 	Users are people. People have money, content, and computers.
 
 	This class is intended to accomodate four distinct sets of behavior:
@@ -46,31 +43,31 @@ class User:
 			Do unto others, after all.
 	"""
 	
-	UID 						= 	"" 				#	Unique Identification. every user is unique.
-	Username 					= 	""				#	username
-	Email 						= 	""				#	email address
-	PhoneNumber					=	""				#	Phone number, stored as a string, formatted as [country][region][number]
+	UID 						= 	""	#	Unique Identification. every user is unique.
+	Username 					= 	""	#	username
+	Email 						= 	""	#	email address
+	PhoneNumber					=	""	#	Phone number, stored as a string, formatted as [country][region][number]
 	
 	#	User Cultural and National Identity attributes
-	Languages 					=	[]				#	list of languages user speaks
-	Interface_Language 			=	""				#	Still, everybody has a preferred default.
-	Time_Zone					=	""				#	The user's time zone <default London, UK>
-	Country						=	""				#	The national borders this user is logged into from within
+	Languages 					=	[]	#	list of languages user speaks
+	Interface_Language 			=	""		#	Still, everybody has a preferred default.
+	Time_Zone					=	""	#	The user's time zone <default London, UK>
+	Country						=	""      #	The national borders this user is logged into from within
 
 	#	Website attributes
-	Owned_Content				=	[]				#	list of content this user owns
-	Held_Content				=	[]				#	list of content this user doesn't own but has anyway
+	Owned_Content				=	[]		#	list of content this user owns
+	Held_Content				=	[]		#	list of content this user doesn't own but has anyway
 
 
 	#	Network attributes
-	User_Nodes					=	[]				#	list of all nodes that this user has logged in on
+	User_Nodes					=	[]	#	list of all nodes that this user has logged in on
 
 
 	#	User Fiscal Attributes
-	User_Local_Currency 		=	""				# 	what the default unit is for earned income
-	Earned_Income 				= 	0.0				# 	How much money a user has earned
-	Accumulated_Debt			=	0.0				#	How much the user has that they still need to pay for
-	Connected_Accounts			=	[]				#	List of accounts that the user can make a withdrawal to
+	User_Local_Currency 		=	""			# 	what the default unit is for earned income
+	Earned_Income 				= 	0.0		# 	How much money a user has earned
+	Accumulated_Debt			=	0.0		#	How much the user has that they still need to pay for
+	Connected_Accounts			=	[]		#	List of accounts that the user can make a withdrawal to
 
 	#	User Functions
 	def __init__(self, Keyspace, Username, email):
@@ -87,8 +84,9 @@ class User:
 		print(self.UID)
 		return (self.UID)
 
-	def CalculateDebt(Owned_Content, Held_Content):
-		pass
+	def CalculateDebt(Owned_Content, Held_Content, Earned_Income):
+		#self.Accumulated_Debt           =       
+                pass 
 
 class Node:
 	"""
@@ -153,7 +151,7 @@ class Content:
 	#Fiscal attributes
 	Content_Price			=		0.0			#	Monetary price to buy a single instance of the content.
 	Content_version			=		""			#	Version ID of this content. 
-												#	TODO: version control. For now, new versions are new content.	
+										#	TODO: version control. For now, new versions are new content.	
 
 	def __init__(Name, Owner, ID, Description):
 		self.Content_Name = Name
@@ -288,4 +286,4 @@ TestUser2.__str__()
 
 TestUser3 = User(User_Keyspace, "derp", "derp")
 TestUser3.__str__()
-"""
+    """

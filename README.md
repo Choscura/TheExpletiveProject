@@ -17,7 +17,7 @@ Now, on the back end of this there is some spooky black magic that I've been wor
 -get website up and running that tests can be run on 
 	--Domain registerd (www.TheExpletiveProject.com)
 	--Hosting- Heroku (free) and AWS learning (expires march 2016...? double check)
-	--Django 4.2 / python 3.4 / Twitter Bootstrap
+	-- Dango 4, python 3.5
 
 -get authentication server up and runnig 
 	--Prototyping/testing
@@ -55,6 +55,7 @@ By uploading content, you understand and agree to the following:
 
 #Philosophies
 
+
 As a general principle, I think you should get what you earn. So I have ideas for calculating how much everything in this project might conceivably be worth. Example: if you make the only client program for this network on your platform, you get some commission on every new unique customer from that platform, or something cool like that. Let's make this fair, but let's give people a reason to participate.
 
 So, there are perhaps 5-6 billion people online, but only 2 billion participating in the online economy. Part of the problem seems to be that there is no way, by default, to participate; but since the delivery of content is such a standard transaction, and since it can be monetized this way, it gives the content delivery networks the advantage of human ingenuity over its predecessor networks; this is a network type that can literally accomodate a sneakernet as a delivery mechanism for its content.
@@ -65,8 +66,6 @@ This project is simply the first of many that will implement experimental method
 
 #Contributors
 
-Just me, at present (June 30, 2015, 4:39 PM). My name is Kendall. I'm a prodigy manchild living in a basement in Portland. From here, I'm literally planning how to colonize space, terraform somalia and end world hunger- among other things. I lived in Thailand for 8 years, 3 as a missionary, 5 as a business owner, and 3 as an illegal immigrant. I have two kids, I'm a single dad, I speak... like four languages at any given time. So, yeah, I'm weird. And I'll do all of this alone if I have to. Because I know this solution fucking works, whether you're competing with pirated software in rural China or Steam in rural Connecticut.
+Kendall Meade
 
-I'v got a roadmap and I'm taking the backroads to stay off the radar. As far as progression along it goes, every step on it is aimed at solving some major fundamental problem encountered by some, most, or all of the human species. From this launch point, I will try to address a large number of these problems, and I hold as a necessity the idea that any solution be self-sustaining, and the philosophical ideal that as much as possible should be fair, if not all, outright. So I'm interested in implementing these solutions as businesses so they remain self-sustaining enough to continue being solutions later on.
-
-I'm in over my head- but I've always been in over my head, and I've got fucking flippers. Seeking applications from anybody with gills who knows what to do.
+	The originator of this project.  I'm a former missionary, amateur linguist and historian, a student of every discipline I can discover information on, and an omnivore of the human experience. I'm also a single dad living in a basement with his kids, so my time to contribute code and make revisions is limited.
